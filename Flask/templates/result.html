@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('https://news.dupontregistry.com/wp-content/uploads/2025/01/DSC06112-scaled.jpg'); /* Car background image */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #ffffff;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 3rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+            color: #f1f1f1;
+        }
+        p {
+            font-size: 1.5rem;
+            margin: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: #4CAF50;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        a:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color:whitesmoke;">Prediction Result</h1>
+
+    
+    <p>The predicted value is: <strong>{{ prediction }}</strong></p>
+    <a href="/">Go Back</a>
+</body>
+</html>

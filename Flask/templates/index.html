@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Traffic Volume Estimation</title>
+</head>
+<body background="https://img.freepik.com/free-photo/anxiety-induced-by-traffic_23-2150981883.jpg?ga=GA1.1.639232803.1750842899&semt=ais_items_boosted&w=740" text="white">
+    <div class="login">
+        <center><h1>Traffic Volume Estimation</h1></center>
+
+        <!-- Main Input Form -->
+        <form action="{{ url_for('predict') }}" method="post">
+            <h1>Please enter the following details:</h1>
+            <!-- <label for="holiday">holiday:</label>
+            <select id="holiday" name="holiday">
+                <option value=2>None</option>
+                <option value=1>Columbus Day</option>
+                <option value=8>Veterans Day</option>
+                <option value=9>Thanksgiving Day</option>
+                <option value=0>Christmas Day</option>
+                <option value=0>New Year's Day</option>
+                <option value=11>Washington's Birthday</option>
+                <option value=5>Memorial Day</option>
+                <option value=12>Independence Day</option>
+                <option value=3>State Fair</option>
+                <option value=4>Labor Day</option>
+                <option value=4>Martin Luther King Jr Day</option>
+            </select> -->
+            &nbsp;&nbsp;<br><br>
+
+            <label for="temp">temp:</label>
+            <input type="number" step="0.01" name="temp" placeholder="temp" required="required" value="288.48" /><br><br>
+
+            <label for="rain">rain:</label>
+            <input type="number" step="any"  name="rain" placeholder="rain" required="required"  value="0.2"/><br><br>
+
+            <label for="snow">snow:</label>
+            <input type="number" step="any" name="snow" placeholder="snow" required="required" value="0.1"/><br><br>
+
+            <label for="weather">weather:</label>
+            <select id="weather" name="weather">
+                <option value=1 selected>Clouds</option>
+                <option value=6>Rain</option>
+                <option value=2>Drizzle</option>
+                <option value=3>Mist</option>
+                <option value=4>Fog</option>
+                <option value=7>Thunderstorm</option>
+                <option value=0>Clear</option>
+                <option value=5>Haze</option>
+                <option value=8>Snow</option>
+                <option value=9>Smoke</option>
+            </select>
+            &nbsp;&nbsp;<br><br>
+
+            <label for="year">year:</label>
+            <input type="number"  name="year" placeholder="year" required="required" value="2024" /><br><br>
+
+            <label for="month">month:</label>
+            <input type="number"  name="month" placeholder="month" required="required" value="2"/><br><br>
+
+            <label for="day">day:</label>
+            <input type="number" min="1" max="31"  name="day" placeholder="day" required="required" value="3" /><br><br>
+
+            <label for="hours">hours:</label>
+            <input type="number"  name="hours" min ="0" max="23" placeholder="hours" required="required" value="2" /><br><br>
+
+            <label for="minutes">minutes:</label>
+            <input type="number"  name="minutes" min="0" max="59" placeholder="minutes" required="required" value="1"/><br><br>
+
+            <label for="seconds">seconds:</label>
+            <input type="number"  name="seconds" min="0" max="59" placeholder="seconds" required="required" value="5"/><br><br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large" style="height:30px;width:200px">Predict</button>
+        </form>
+    </div>
+    <br>
+    {{ prediction_text }}
+</body>
+</html>
